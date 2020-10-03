@@ -1,0 +1,24 @@
+ingress:
+  hosts:
+    - host: adminer.k8s.com
+      paths:
+        - path: /
+          backend:
+            service:
+              name: adminer
+              port:
+                number: 8080
+    - host: kanban.k8s.com
+      paths:
+        - path: /api/
+          backend:
+            service:
+              name: kanban-app
+              port:
+                number: 8080
+        - path: /
+          backend:
+            service:
+              name: kanban-ui
+              port:
+                number: 80
