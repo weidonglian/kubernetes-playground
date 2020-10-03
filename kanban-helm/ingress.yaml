@@ -4,7 +4,7 @@ ingress:
       paths:
         - path: /
           backend:
-            service
+            service:
               name: adminer
               port:
                 number: 8080
