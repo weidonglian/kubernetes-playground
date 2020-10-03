@@ -1,0 +1,12 @@
+ingress:
+  name: ingress-service
+  replicaCount: 1
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          backend:
+            service:
+              name: serviceName
+              port:
+                number: 8080
